@@ -5,18 +5,20 @@
  */
 package javaapplication2;
 
-/**
- *
- * @author T-107
- */
-public class JavaApplication2 {
 
-    /**
-     * @param args the command line arguments
-     */
+public class JavaApplication2 {
+   
+    
     public static void main(String[] args) {
-        // TODO code application logic here
-                System.out.println("mi primer programa de jggggggava ya pudimos :)");;
+                // TODO code application logic here
+               
+                Imc objeto=new Imc();
+                System.out.println("Tu imc es de :"+objeto.calcular());    
+              
+                
+                
+                
+                
     }
     
 }
