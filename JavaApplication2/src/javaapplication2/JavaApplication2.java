@@ -13,7 +13,7 @@ public class JavaApplication2 {
                 // TODO code application logic here
                
                 Imc objeto=new Imc();
-                System.out.println("Tu imc es de :"+objeto.calcular());    
+                System.out.println("Tu imc es de:"+objeto.calcular());    
               
                 
                 
