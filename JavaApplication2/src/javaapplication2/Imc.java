@@ -1,18 +1,21 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+////// creando constructores
 package javaapplication2;
 
-/**
- *
- * @author T-107
- */
+////////// en esta parte se declaran las variables a ocupar dentro del contructor
 public class Imc {
     float peso;
     float altura;
     
+    /////// Se crea el otro constructor con el que se  van a pasar las variables que
+    /////// el usuario ingresa en la ventana grafica y se le asignan a las variables 
+    ///////que van a realizar la operacion del calculo.
+    
+    public Imc(float p,float a ){
+    
+    peso=p;
+    altura=a;
+    
+    }
     
     public Imc(){
     
@@ -22,8 +25,6 @@ public class Imc {
     
     
     }
-    
-    
     
     public Imc(float f){
     
@@ -41,11 +42,31 @@ public class Imc {
     
     }
     
-    
+  /// Este metodo se ocupa para realizar el calculo del Imc en esta parte  
     public float calcular(){
     float resultadoImc=peso/(altura*altura);
     return resultadoImc;
     
+    if(resultadoImc<20){
+    
     
     }
+   
+    else {
+        if(resultadoImc>=20&&resultadoImc<25) {
+        
+    }
+        else {
+            
+            if(resultadoImc>=25&&resultadoImc<30){
+    
+     }
+            else {
+                if(resultadoImc>30){
+     
+     
+     }
+    
+            
+                }
 }

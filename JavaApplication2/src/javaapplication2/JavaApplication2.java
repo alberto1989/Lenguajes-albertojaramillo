@@ -17,6 +17,10 @@ public class JavaApplication2 {
               
                 
                 
+                String x="12";
+                Float valor = Float.parseFloat(x);
+                System.out.println(valor);
+                
                 
                 
     }
