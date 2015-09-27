@@ -44,29 +44,29 @@ public class Imc {
     
   /// Este metodo se ocupa para realizar el calculo del Imc en esta parte  
     public float calcular(){
-    float resultadoImc=peso/(altura*altura);
+    Float resultadoImc=peso/(altura*altura);
     return resultadoImc;
     
+    
+    
     if(resultadoImc<20){
-    
-    
-    }
-   
-    else {
-        if(resultadoImc>=20&&resultadoImc<25) {
+        
+        System.out.println("Tienes un nivel de grasa bajo");
         
     }
-        else {
-            
-            if(resultadoImc>=25&&resultadoImc<30){
     
-     }
-            else {
-                if(resultadoImc>30){
+        else  if(resultadoImc>=20&&resultadoImc<25) {
+        System.err.println("Tu nivel de grasa es normal");
+                    }
+            else  if(resultadoImc>=25&&resultadoImc<30){
+    
+                System.err.println("Tienes un nivel de grasa alto");
+                     }
+                     else if (resultadoImc>30){
+                   System.err.println("Estas a punto de morir");
      
-     
-     }
+                          }
     
             
-                }
+    }
 }
