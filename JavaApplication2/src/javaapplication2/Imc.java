@@ -5,6 +5,8 @@ package javaapplication2;
 public class Imc {
     float peso;
     float altura;
+   String mensaje;
+   float resultadoImc;
     
     /////// Se crea el otro constructor con el que se  van a pasar las variables que
     /////// el usuario ingresa en la ventana grafica y se le asignan a las variables 
@@ -15,7 +17,10 @@ public class Imc {
     peso=p;
     altura=a;
     
+    
     }
+    
+    
     
     public Imc(){
     
@@ -41,32 +46,49 @@ public class Imc {
     
     
     }
+
+    Imc(Float peso, Float altura) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
   /// Este metodo se ocupa para realizar el calculo del Imc en esta parte  
     public float calcular(){
-    Float resultadoImc=peso/(altura*altura);
-    return resultadoImc;
-    
-    
-    
-    if(resultadoImc<20){
         
-        System.out.println("Tienes un nivel de grasa bajo");
+    resultadoImc=peso/(altura*altura);
+   
+     if(resultadoImc<20){
         
+       mensaje="Tu nivel de grasa es normal";
+       return resultadoImc;
+       
+     
     }
     
         else  if(resultadoImc>=20&&resultadoImc<25) {
-        System.err.println("Tu nivel de grasa es normal");
+            
+        mensaje="Tu nivel de grasa es normal";
+       return resultadoImc;
                     }
             else  if(resultadoImc>=25&&resultadoImc<30){
     
-                System.err.println("Tienes un nivel de grasa alto");
+               mensaje="Tu nivel de grasa es normal";
+                 return resultadoImc;
+              
                      }
                      else if (resultadoImc>30){
-                   System.err.println("Estas a punto de morir");
+                 mensaje="Tu nivel de grasa es normal";
+                  return resultadoImc;
+                  
      
                           }
+        return 0;
+        
+        
+        
+      
     
             
     }
+
+    
 }
