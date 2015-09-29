@@ -122,9 +122,6 @@ public class VentanaImc extends javax.swing.JFrame {
            Float altura=  Float.parseFloat(textoAltura.getText());
         
      
-           
-           
-           
            ///////////Despues de haber asignado las variables y tranformado con 
            ///wrapper se manda a llamar el objeto que se creo junto con un nuevo
            /// contructor en este caso Imc(peso,altur) que se tiene que crear en 
@@ -132,7 +129,7 @@ public class VentanaImc extends javax.swing.JFrame {
            
            Imc nuevo=new Imc(peso,altura);
       
-           etiquetaResultado.setText("Tu Imc es de : "+nuevo.calcular());
+           etiquetaResultado.setText(nuevo.calcular());
             
           
            
