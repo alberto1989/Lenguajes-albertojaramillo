@@ -12,7 +12,13 @@ package Collection;
 public class ProbarCollection {
      public static void main(String[] args) {
         PersistenciaUsuarios p=new PersistenciaUsuarios();
-         System.out.println(p.obtenerUsuario());
+         System.out.println(p.obtenerUsuario().size());
+         
+         for(Usuario u: p.obtenerUsuario()){
+             
+             System.out.println("El login es :"+u.getLogin());
+             
+         }
          //// intentar que te imprima todos los arreglos con un ciclo for mejorado
          
     }
