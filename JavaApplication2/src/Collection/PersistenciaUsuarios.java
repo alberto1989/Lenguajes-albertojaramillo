@@ -13,7 +13,9 @@ import java.util.*;
  */
 public class PersistenciaUsuarios {
     
-    public ArrayList<Usuario> obtenerUsuario(){      
+    public ArrayList<Usuario> obtenerUsuario(){ 
+        
+        
     ArrayList<Usuario> usuarios=new ArrayList<Usuario>();
     // Empezamos a llenar el arreglo (ArrayList) generico a la clase usuario
     

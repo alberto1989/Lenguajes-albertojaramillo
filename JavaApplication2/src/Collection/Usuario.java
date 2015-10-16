@@ -5,11 +5,18 @@
  */
 package Collection;
 
+import java.io.Serializable;
+
 /**
  *
  * @author T-107
  */
-public class Usuario {
+public class Usuario implements Serializable {
+
+    @Override
+    public String toString() {
+        return "Usuario{" + "login=" + login + ", password=" + password + ", direccion=" + direccion + '}';
+    }
     private String login;
     private String password;
     private Direccion direccion;

@@ -16,10 +16,10 @@ public class ProbarCollection {
          
          for(Usuario u: p.obtenerUsuario()){
              
-             System.out.println("El login es :"+u.getLogin());
+             System.out.println("El login es :"+u.getLogin()+" y vive en la calle "+u.getDireccion().getCalle());
              
          }
-         //// intentar que te imprima todos los arreglos con un ciclo for mejorado
+        
          
     }
     
