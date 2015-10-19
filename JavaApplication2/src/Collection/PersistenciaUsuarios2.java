@@ -11,9 +11,7 @@ import java.util.ArrayList;
  * @author T-107
  */
 public class PersistenciaUsuarios2 {
-    
-   ArrayList<Usuario> usuarios=new ArrayList<Usuario>();  
-   
+      ArrayList<Usuario> usuarios=new ArrayList<Usuario>();  
    
    /// contructor del array
    public PersistenciaUsuarios2(){
@@ -23,7 +21,6 @@ public class PersistenciaUsuarios2 {
    // Ventana de Imc como se hace
    
    }
-   
    
    /// metodo para guardar 
   public void guardar(Usuario u )throws Exception{
@@ -37,13 +34,8 @@ public class PersistenciaUsuarios2 {
       
      if(f.exists())usuarios=buscartodos();
      
-     
-  
-  
   }  
     
-  
-  
   /// metodo para Leer
   
   public ArrayList<Usuario> buscartodos() throws Exception{
