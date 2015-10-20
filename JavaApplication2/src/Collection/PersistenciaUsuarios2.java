@@ -33,7 +33,10 @@ public class PersistenciaUsuarios2 {
       File f=new File("/C");
       
      if(f.exists())usuarios=buscartodos();
-     
+      FileOutputStream fos=new FileOutputStream(f);       
+        ObjectOutputStream oos=new ObjectOutputStream(fos);
+        usuarios.add(u);
+        oos.writeObject(usuarios);
   }  
     
   /// metodo para Leer
@@ -41,10 +44,19 @@ public class PersistenciaUsuarios2 {
   public ArrayList<Usuario> buscartodos() throws Exception{
   // Aqui va la logica
   // aqui va la parte del packete archivaldo de interfaz de usuario la parte de regresa el mensaje serializado
-   File f=new File("/C");
-  
+   File file=new File("/C");
+  FileInputStream fis=new FileInputStream(file);
+  ObjectInputStream ois=new ObjectInputStream(fis);
+   usuarios= (ArrayList<Usuario>) ois.readObject();
       
       
   return usuarios;
   }
+  
+  
+   public Usuario buscarUno(Usuario u)throws Exception{
+      File f=new File("/home/campitos/Documents/usuarios.sql");
+        //Aqui va tu otra tarea
+        return u;
+    }
 }
