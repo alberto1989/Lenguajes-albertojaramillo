@@ -13,7 +13,7 @@ public class ProbarSerializacion {
                  d1.setCalle("Isla groelandia");
                  d1.setColonia("Jardines de Morelos");
                  d1.setCp(55070);
-                 d1.setMunicipio("Ecateoec");
+                 d1.setMunicipio("Ecatepec");
                  Usuario u=new Usuario();
                  u.setDireccion(d1);
                  u.setLogin("heroe89");
