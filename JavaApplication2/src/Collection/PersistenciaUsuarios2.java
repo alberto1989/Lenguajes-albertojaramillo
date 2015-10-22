@@ -20,6 +20,8 @@ public class PersistenciaUsuarios2 {
    // se tiene que hacer igual que en persistenciaUsuarios solo que mandando  los valores del formulario ver en 
    // Ventana de Imc como se hace
    
+   
+   
    }
    
    /// metodo para guardar 
@@ -30,7 +32,7 @@ public class PersistenciaUsuarios2 {
       // este metodo es el mas dificil por que primero se debe hacer el de abajo de buscar
       // hay que hacer un if con el metodo de buscar para verificar que no exista
       
-      File f=new File("/C");
+      File f=new File("C:\\base.sql");
       
      if(f.exists())usuarios=buscartodos();
       FileOutputStream fos=new FileOutputStream(f);       
@@ -44,7 +46,7 @@ public class PersistenciaUsuarios2 {
   public ArrayList<Usuario> buscartodos() throws Exception{
   // Aqui va la logica
   // aqui va la parte del packete archivaldo de interfaz de usuario la parte de regresa el mensaje serializado
-   File file=new File("/C");
+   File file=new File("C:\\base.sql");
   FileInputStream fis=new FileInputStream(file);
   ObjectInputStream ois=new ObjectInputStream(fis);
    usuarios= (ArrayList<Usuario>) ois.readObject();
@@ -55,7 +57,7 @@ public class PersistenciaUsuarios2 {
   
   
    public Usuario buscarUno(Usuario u)throws Exception{
-      File f=new File("/home/campitos/Documents/usuarios.sql");
+      File f=new File("C:\\base.sql");
         //Aqui va tu otra tarea
         return u;
     }

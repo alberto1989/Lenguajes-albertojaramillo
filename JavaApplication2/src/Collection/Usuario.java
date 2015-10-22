@@ -12,6 +12,23 @@ import java.io.Serializable;
  * @author T-107
  */
 public class Usuario implements Serializable {
+    private String nombre;
+
+    public Usuario(String nombre, String password, Collection.Direccion direccion ) {
+        this.nombre = nombre;
+        this.password = password;
+        this.direccion = direccion;
+    }
+
+    Usuario() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    Usuario(String text, String text0, Usuario u) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    
 
     @Override
     public String toString() {

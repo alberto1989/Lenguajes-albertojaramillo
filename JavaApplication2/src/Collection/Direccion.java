@@ -17,6 +17,19 @@ public class Direccion implements Serializable {
     private String colonia;
     private String municipio;
 
+   public Direccion(String calle, String colonia,String cp, String municipio) {
+        this.calle = calle;
+        this.colonia = colonia;
+        this.colonia = cp;
+        this.municipio = municipio;
+    }
+
+    Direccion() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+   
+
     public String getCalle() {
         return calle;
     }
