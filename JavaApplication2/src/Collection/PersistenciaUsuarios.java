@@ -20,7 +20,7 @@ public class PersistenciaUsuarios {
     // Empezamos a llenar el arreglo (ArrayList) generico a la clase usuario
     
     
-    
+  
     Direccion d1=new Direccion();
     d1.setCalle("Av. Mexico");
     d1.setColonia("Ejidos Tulpetlac");
@@ -64,5 +64,5 @@ public class PersistenciaUsuarios {
    
    return usuarios;
     }
-    
+   
 }

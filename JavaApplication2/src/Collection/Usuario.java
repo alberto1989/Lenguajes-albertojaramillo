@@ -12,20 +12,23 @@ import java.io.Serializable;
  * @author T-107
  */
 public class Usuario implements Serializable {
-    private String nombre;
+      private String login;
+    private String password;
+    private Direccion direccion;
 
-    public Usuario(String nombre, String password, Collection.Direccion direccion ) {
-        this.nombre = nombre;
+ 
+    public Usuario(String login, String password, Collection.Direccion direccion ) {
+        this.login = login;
         this.password = password;
         this.direccion = direccion;
     }
 
     Usuario() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+
     }
 
     Usuario(String text, String text0, Usuario u) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+
     }
 
     
@@ -34,10 +37,7 @@ public class Usuario implements Serializable {
     public String toString() {
         return "Usuario{" + "login=" + login + ", password=" + password + ", direccion=" + direccion + '}';
     }
-    private String login;
-    private String password;
-    private Direccion direccion;
-
+  
     /**
      * @return the login
      */

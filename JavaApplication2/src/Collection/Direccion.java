@@ -13,19 +13,19 @@ import java.io.Serializable;
  */
 public class Direccion implements Serializable {
     private String calle;
-    private long cp;
+    private String cp;
     private String colonia;
     private String municipio;
 
    public Direccion(String calle, String colonia,String cp, String municipio) {
         this.calle = calle;
         this.colonia = colonia;
-        this.colonia = cp;
+        this.cp = cp;
         this.municipio = municipio;
     }
 
     Direccion() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
 
    
@@ -38,11 +38,11 @@ public class Direccion implements Serializable {
         this.calle = calle;
     }
 
-    public long getCp() {
+    public String getCp() {
         return cp;
     }
 
-    public void setCp(long cp) {
+    public void setCp(String cp) {
         this.cp = cp;
     }
 
