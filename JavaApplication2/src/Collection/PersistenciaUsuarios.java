@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+/*
 package Collection;
 
 import java.util.*;
@@ -11,6 +12,7 @@ import java.util.*;
  *
  * @author T-107
  */
+/*
 public class PersistenciaUsuarios {
     
     public ArrayList<Usuario> obtenerUsuario(){ 
@@ -66,3 +68,4 @@ public class PersistenciaUsuarios {
     }
    
 }
+*/
