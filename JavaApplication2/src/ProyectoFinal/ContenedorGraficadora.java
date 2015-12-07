@@ -13,7 +13,16 @@ public class ContenedorGraficadora extends Canvas {
     
 
     @Override
-    public void paint(Graphics g) { 
+    public void paint(Graphics g) {    
+        //Calculos
+        float A,B,C,vertice;
+         A= Float.parseFloat( MiGraficadora.textoA.getText());
+         B=Float.parseFloat(MiGraficadora.textoB.getText());
+         C=Float.parseFloat(MiGraficadora.textoC.getText());
+        
+          vertice=(-1*B)/(2*A);
+      
+      
         super.paint(g); //To change body of generated methods, choose Tools | Templates.
         g.setColor(Color.black);
         g.fillRect(0, 0, getWidth(),getHeight());
