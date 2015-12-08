@@ -7,7 +7,7 @@ import java.awt.*;
 public class ContenedorGraficadora extends Canvas {
     public static float apertura=0.01f;
 
-    
+    static float A,B,C,XV,YV,XC,XC2;
     
     //Lo estatico es lo primero que el compilador corre ya que no necesita constructor ni inicializar variables
     
@@ -15,12 +15,16 @@ public class ContenedorGraficadora extends Canvas {
     @Override
     public void paint(Graphics g) {    
         //Calculos
-        float A,B,C,vertice;
+      
          A= Float.parseFloat( MiGraficadora.textoA.getText());
          B=Float.parseFloat(MiGraficadora.textoB.getText());
          C=Float.parseFloat(MiGraficadora.textoC.getText());
         
-          vertice=(-1*B)/(2*A);
+          XV=(-1*B)/(2*A);
+          YV= (float) ((A*Math.pow(XV, 2))+(B*XV)+C);
+          
+          XC=(float) ((-B+(Math.sqrt((Math.pow(B,2)-4*A*C))))/2*A);
+          XC=(float) ((-B-(Math.sqrt((Math.pow(B,2)-4*A*C))))/2*A);
       
       
         super.paint(g); //To change body of generated methods, choose Tools | Templates.
