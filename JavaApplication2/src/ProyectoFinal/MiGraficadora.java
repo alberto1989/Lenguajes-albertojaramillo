@@ -202,7 +202,9 @@ public class MiGraficadora extends javax.swing.JFrame {
     private void botonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonActionPerformed
         // TODO add your handling code here:
    
-      
+        //System.out.println("El vertice es:"+ContenedorGraficadora.XV+","+ContenedorGraficadora.YV);
+        //System.out.println("corte en eje x:"+ContenedorGraficadora.XC+","+ContenedorGraficadora.XC2);
+        
       float valor=Float.parseFloat(textoAmplitud.getText());
       float abrir=1/((valor)*100);
       

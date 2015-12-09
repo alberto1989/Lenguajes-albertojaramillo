@@ -7,25 +7,34 @@ import java.awt.*;
 public class ContenedorGraficadora extends Canvas {
     public static float apertura=0.01f;
 
-    static float A,B,C,XV,YV,XC,XC2;
+    static float A,B,C;
+    static double XV,YV,XC,XC2,YC;
     
     //Lo estatico es lo primero que el compilador corre ya que no necesita constructor ni inicializar variables
     
 
     @Override
-    public void paint(Graphics g) {    
+    public  void paint(Graphics g) {    
         //Calculos
-      
+      // VARIABLES
          A= Float.parseFloat( MiGraficadora.textoA.getText());
          B=Float.parseFloat(MiGraficadora.textoB.getText());
          C=Float.parseFloat(MiGraficadora.textoC.getText());
-        
+        //CALCULO VERTICE
           XV=(-1*B)/(2*A);
           YV= (float) ((A*Math.pow(XV, 2))+(B*XV)+C);
-          
-          XC=(float) ((-B+(Math.sqrt((Math.pow(B,2)-4*A*C))))/2*A);
-          XC=(float) ((-B-(Math.sqrt((Math.pow(B,2)-4*A*C))))/2*A);
+          //CALCULO CORTE EJE X
+          XC=((-B+(Math.sqrt((Math.pow(B,2)-4*A*C))))/2*A);
+          XC2=((-B-(Math.sqrt((Math.pow(B,2)-4*A*C))))/2*A);
+          // CORTE EJE Y
+          YC=C;
       
+          
+          System.out.println("El vertice es:"+XV+","+YV);
+          System.out.println("corte en eje x:"+XC+","+XC2);
+          System.out.println("corte en eje y:"+YC);
+        
+          
       
         super.paint(g); //To change body of generated methods, choose Tools | Templates.
         g.setColor(Color.black);
@@ -40,6 +49,9 @@ public class ContenedorGraficadora extends Canvas {
         g.translate(getWidth()/2, getHeight()/2);
         
         g.drawString("Origen",0,0);
+        
+        
+        
         //Vamos a graficar una parábola.
        
        float x0=-100;
@@ -47,8 +59,18 @@ public class ContenedorGraficadora extends Canvas {
        float y0;
        float y1;
        
+       
+      
        ///ciclo for
        for(int i=0;i<=200;i++){ 
+           
+         // CALCULO DE ABERTURA DE LA PARABOLA  
+           int AX=i;
+           float AY=(float) (A*(Math.pow(AX, 2))+(AX*B)+C);
+           
+           System.out.println(AX+","+AY);
+           
+           
         y0=apertura*-x0*x0;
         y1=apertura*-x1*x1;
         g.drawLine((int)x0,(int)y0,(int)x1,(int)y1);
